@@ -1,0 +1,19 @@
+{
+  "branch": "main",
+  "depends_recipe": "",
+  "description_control": "common reusable tools for enigma2 plugins",
+  "description_recipe": "common reusable tools for enigma2 plugins",
+  "history_source_dir": "toolkit",
+  "internal_package_name": "enigma2-plugin-systemplugins-toolkit",
+  "module_dir_name": "Toolkit",
+  "output_subdir": "toolkit",
+  "package_name": "enigma2-plugin-systemplugins-toolkit",
+  "plugin_src_rel": "toolkit",
+  "python_package": "Toolkit",
+  "rdepends_recipe": "",
+  "replaces": "",
+  "repo_name": "Toolkit",
+  "rrecommends": "",
+  "rreplaces": "",
+  "selected_from_plugin_list": true
+}

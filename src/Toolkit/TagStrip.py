@@ -2,15 +2,12 @@
 from re import sub, finditer
 
 import six
-import six
 
 
 try:
 	import htmlentitydefs
-	iteritems = lambda d: six.iteritems(d)
-except ImportError as ie:
+except ImportError:
 	from html import entities as htmlentitydefs
-	iteritems = lambda d: d.items()
 	unichr = chr
 
 
@@ -63,7 +60,7 @@ def strip(html):
 		if key not in entitydict:
 			entitydict[key] = x.group(1)
 
-	for key, codepoint in iteritems(entitydict):
+	for key, codepoint in entitydict.items():
 		html = html.replace(key, six.unichr(int(codepoint)))
 
 	# Return result with leading/trailing whitespaces removed

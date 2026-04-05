@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 from re import sub, finditer
 
-import six
-
-
 try:
 	import htmlentitydefs
 except ImportError:
@@ -61,7 +58,7 @@ def strip(html):
 			entitydict[key] = x.group(1)
 
 	for key, codepoint in entitydict.items():
-		html = html.replace(key, six.unichr(int(codepoint)))
+		html = html.replace(key, chr(int(codepoint)))
 
 	# Return result with leading/trailing whitespaces removed
 	return html.strip()
